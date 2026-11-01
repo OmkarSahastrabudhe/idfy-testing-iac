@@ -5,7 +5,7 @@ include "root" {
 }
 
 terraform {
-  source = "../../../../terraform-modules/EC2/"
+  source = "../../../../terrafrom-modules/EC2/"
 }
 
 # ==============================================================================

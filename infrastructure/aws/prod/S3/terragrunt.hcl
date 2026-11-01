@@ -7,7 +7,7 @@ include "root" {
 
 # 2. Terraform S3 Module ka path (Double slash '//' Terragrunt standard hai)
 terraform {
-  source = "../../../../terrafrom-modules//S3"
+  source = "../../../../terrafrom-modules/S3/"
 }
 
 # 3. Variables pass karo

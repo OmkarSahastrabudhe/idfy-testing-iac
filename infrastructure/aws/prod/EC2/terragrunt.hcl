@@ -5,14 +5,14 @@ include "root" {
 }
 
 terraform {
-  source = "../../../terraform-modules//ec2"
+  source = "../../../../terraform-modules/EC2/"
 }
 
 # ==============================================================================
 # 1. DEPENDENCY ON IAM MODULE (Fetches Instance Profile Name automatically)
 # ==============================================================================
 dependency "iam" {
-  config_path = "../iam"
+  config_path = "../IAM"
 
   # Mock outputs allow 'terragrunt run-all plan' to work even BEFORE IAM is deployed!
   mock_outputs = {
@@ -23,7 +23,7 @@ dependency "iam" {
 
 # Optional: Ensure S3 is also created before EC2 boots up
 dependency "s3" {
-  config_path  = "../s3"
+  config_path  = "../S3"
   skip_outputs = true
 }
 
